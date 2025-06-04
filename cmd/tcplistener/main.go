@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"httpfromtcp/internal/request"
 	"log"
 	"net"
+
+	"github.com/darginmathi/httpfromtcp/internal/request"
 )
 
 const port = ":42069"

@@ -2,8 +2,9 @@ package response
 
 import (
 	"fmt"
-	"httpfromtcp/internal/headers"
 	"io"
+
+	"github.com/darginmathi/httpfromtcp/internal/headers"
 )
 
 func GetDefaultHeaders(contentLen int) headers.Headers {

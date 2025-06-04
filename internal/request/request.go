@@ -4,10 +4,11 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"httpfromtcp/internal/headers"
 	"io"
 	"strconv"
 	"strings"
+
+	"github.com/darginmathi/httpfromtcp/internal/headers"
 )
 
 type RequestLine struct {
@@ -184,7 +185,7 @@ func (r *Request) parseSingle(data []byte) (int, error) {
 			r.state = requestStateDone
 		}
 		return len(data), nil
-		
+
 	case requestStateDone:
 		return 0, fmt.Errorf("error: trying to read data in a done state")
 	default:
